@@ -172,6 +172,7 @@ pub fn f64_nearest(a: f64) -> f64 {
 #[unstable(feature = "wasm_numeric_instr", issue = "133908")]
 pub fn f64_sqrt(a: f64) -> f64 {
     crate::intrinsics::sqrtf64(a)
+<<<<<<< HEAD
 }
 
 unsafe extern "C-unwind" {
@@ -201,4 +202,6 @@ unsafe extern "C-unwind" {
 pub unsafe fn throw<const TAG: i32>(ptr: *mut u8) -> ! {
     static_assert!(TAG == 0); // LLVM only supports tag 0 == C++ right now.
     wasm_throw(TAG, ptr)
+=======
+>>>>>>> e8bb3cae4cd2b04bdc252cdf79102717db2b2d8d
 }
